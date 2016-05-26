@@ -6,8 +6,7 @@ bigimg: /img/WifiVolumeKnobPrototype1.jpg
 
 **Why?**
 I recently started using [Volumio](https://volumio.org/) as my main music player, but I soon got fed up with opening up the webinterface every time I want to change the volume or pause the song.
-My inspiration is [this beatiful piece of work](http://runawaybrainz.blogspot.de/2013/11/adafruit-trinket-compatible-volume-usb.html) by Rupert Hirst:
-![Inspiration](http://4.bp.blogspot.com/-NP2IBCyFxlU/UoPCQhp21AI/AAAAAAAADF8/j20z4j5vxu4/s640/IMGA0822mod+(Large).png)
+My inspiration is [this beatiful piece of work](http://runawaybrainz.blogspot.de/2013/11/adafruit-trinket-compatible-volume-usb.html) by Rupert Hirst.
 
 **What?**
 I want to build a similar-looking, probably larger knob that works over wifi, ideally running from a Lithium-Ion battery with an integrated USB charger. I also want to include basic playback controls while keeping the exterior elegant.
