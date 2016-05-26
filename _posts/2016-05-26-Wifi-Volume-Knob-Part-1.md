@@ -12,6 +12,7 @@ My inspiration is [this beatiful piece of work](http://runawaybrainz.blogspot.de
 I want to build a similar-looking, probably larger knob that works over wifi, ideally running from a Lithium-Ion battery with an integrated USB charger. I also want to include basic playback controls while keeping the exterior elegant.
 
 **Features I want to include:**
+
 * Change the volume by rotating the knob
 * Play/pause the current song by pressing the knob
 * Change the song by pressing and turning the knob
