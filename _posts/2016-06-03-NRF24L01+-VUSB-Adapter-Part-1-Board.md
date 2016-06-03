@@ -29,5 +29,6 @@ BOM:
 * X7R-G1206 1,0/50  
 * MPE 094-2-008  
 * USB AWF  
-* 4 resistors, not included in total
+* 4 resistors, not included in total  
+  
 Total: 3.01€ from [Reichelt.de](http://www.reichelt.de)
