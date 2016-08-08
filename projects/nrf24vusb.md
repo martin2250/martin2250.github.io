@@ -17,7 +17,8 @@ This also has the benefit of offloading much of the work from the SBC, and of co
 Nordic Semiconductor, the manufacturer of the NRF24 series of chips also produces their own line of microcontrollers with integrated 2.4GHz transceiver and even an actual USB interface like the [nRF24LU1+](http://www.nordicsemi.com/eng/Products/2.4GHz-RF/nRF24LU1P). These chips often get used in wireless mouse/keyboard dongles and would fit this project perfectly as they are readily available with fully populated PCBS and enclosures.
 Unfortunately, there are no cheap solutions for programming these chips and I don't have any experience working with 8051s, so I chose to stick with AVRs.
 
-###Hardware
+Hardware
+--------
 
 V-USB requires only two pins which both share the same port and one of which must be an interrupt pin. Of all ATTiny's, the 'Tiny861 fits this requirement perfectly as the port which INT0 is on also has exactly one more pin left that is not used for the crystal, SPI or reset.
 
@@ -26,7 +27,8 @@ My PCB measures 18x34mm ,is populated on both sides and can easily be hand-solde
 ![](/img/vusb-nrf24-01.jpg)
 After flashing a basic VUSB demo, I was greeted by the familiar usb-device-recognized-chime. This part of the hardware works. The boards have just a single error: MOSI and MISO are swapped. I didn't consider that the USI found in many AtTinys does not work like a proper hardware SPI. Since I noticed this before assembling the first board, it was pretty easy to cut the traces and fix them with some enamelled copper wire. The PCB layout on GitHub does no longer have this mistake.
 
-###Software
+Software
+--------
 
 The first iteration of the software exposed individual registers of the NRF24L01+ to the PC, later I decided to let the AtTiny handle all communication with the transceiver. Right now, the protocol consists of just 4 different messages:
 
@@ -47,7 +49,8 @@ TX packets also have one buffer spot on the microcontroller, it will automatical
 To make the code simpler, I decided to dedicate pipe 0 of the NRF24L01+ entirely to receiving ack packets. This means that only P1 through 5 are available for receiving packets. Be aware that all five pipes share the first four bytes of the address, so only the LSB can differ.  
 Also if you want to build your own client, remember to transfer the five address bytes in reverse order (LSB first).
 
-###PC Software
+PC Software
+-----------
 
 I also wrote a simple GUI for debugging, [you can find it on GitHub](https://github.com/martin2250/NRF24Debug). It is written in C# and uses LibUsbDotNet. It should also run on Mono, but I haven't tried that yet.
 ![](/img/nrf-debug-screenshot.png)
