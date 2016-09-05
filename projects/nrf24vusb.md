@@ -27,7 +27,13 @@ My PCB measures 18x34mm ,is populated on both sides and can easily be hand-solde
 ![](/img/vusb-nrf24-01.jpg)
 After flashing a basic VUSB demo, I was greeted by the familiar usb-device-recognized-chime. This part of the hardware works. The boards have just a single error: MOSI and MISO are swapped. I didn't consider that the USI found in many AtTinys does not work like a proper hardware SPI. Since I noticed this before assembling the first board, it was pretty easy to cut the traces and fix them with some enamelled copper wire. The PCB layout on GitHub does no longer have this mistake.
 
-Software
+HID firmware
+--------
+
+This is the firmware that I'm using currently. It replaces the ugly custom-protocol + crappy daemon system. It enumerates as a "Consumer device" ( = fancy keyboard), only receives messages from my volume knob and sends them to the host as volume up/down, next/previous song and pla/pause keystrokes.  
+You can find the current version on [Github](https://github.com/martin2250/nrf24hid). It is definitely worth a look, especially if you want to implement your own HID device.
+
+Generic (Debug) firmware
 --------
 
 The first iteration of the software exposed individual registers of the NRF24L01+ to the PC, later I decided to let the AtTiny handle all communication with the transceiver. Right now, the protocol consists of just 4 different messages:
