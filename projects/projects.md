@@ -2,6 +2,10 @@
 layout: page
 title: My Projects
 ---
+[CNC machine](/projects/cnc-2/cnc-2)
+<center>
+Documentation for my new CNC machine
+</center>
 
 [NRF24L01+ V-USB dongle](/projects/nrf24vusb)
 ==
