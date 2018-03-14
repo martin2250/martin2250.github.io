@@ -1,7 +1,7 @@
 ---
 layout: post
 title: motor drivers for my CNC machine
-bigimg: /img/motor-driver-1.jpg
+bigimg: /img/CNC/motor-driver/motor-driver-title.jpg
 ---
 My new CNC machine uses JMC's iHSV57-36-18-36 integrated servo motors. One big advantage is that they don't require any external electronics, the encoder, controller and power electronics are all included. They only need power (20-50V) and step/direction signals, the latter of which are galvanically isolated by optocouplers. There is also an RS232 configuration port for setting the parameters for the PID control loops.
 
