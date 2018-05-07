@@ -4,7 +4,8 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "http://martin2250.github.io"
+#url: "http://martin2250.github.io"
+url: "127.0.0.1:4000"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -60,6 +61,7 @@ footer-link-col: "#404040"
 
 # Change all these values or delete the ones you don't want.
 # Important: you must keep the "name" parameter, everything else you can remove
+author:
   name: martin2250
   #email: "youremail@domain.com"
   #facebook: yourname  # eg. daattali
@@ -112,7 +114,6 @@ url-pretty: "martin2250.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # Fill in your Google Analytics ID to track your website using GA
 google_analytics: "UA-77706751-1"
-=======
 # Facebook App ID
 # fb_app_id: ""
 
