@@ -112,7 +112,7 @@ url-pretty: "martin2250.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 #disqus: ""
 
 # Fill in your Google Analytics ID to track your website using GA
-google_analytics: "UA-77706751-1"
+#google_analytics:
 # Facebook App ID
 # fb_app_id: ""
 
